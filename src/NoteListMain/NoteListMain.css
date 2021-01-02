@@ -1,0 +1,7 @@
+.main-notes {
+    display: grid;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
