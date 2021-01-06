@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
-//import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import NoteListNav from '../Components/NoteListNav/NoteListNav';
 import NotePageNav from '../Components/NotePageNav/NotePageNav';
 import NoteListMain from '../Components/NoteListMain/NoteListMain';
@@ -93,6 +92,7 @@ class App extends Component {
                     />
                 ))}
                 <Route path="/note/:noteId" component={NotePageMain} />
+                
             </>
         );
     }

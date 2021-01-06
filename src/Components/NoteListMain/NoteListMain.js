@@ -21,9 +21,8 @@ export default class NoteListMain extends React.Component {
     return (
       <section className='NoteListMain'>
          <div className='NoteListMain__button-container'>
+          <Link to='/add-note'>
           <button
-            tag={Link}
-            to='/add-note'
             type='button'
             className='NoteListMain__add-note-button'
           >
@@ -31,6 +30,7 @@ export default class NoteListMain extends React.Component {
             <br />
             Note
           </button>
+          </Link>
         </div>
         <ul>
           {notesForFolder.map(note =>

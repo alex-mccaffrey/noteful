@@ -56,7 +56,7 @@ class AddNote extends React.Component {
       folderId: folder.value,
       modified: new Date(),
     };
-    console.log(addNote);
+
 
     fetch("http://localhost:9090/notes", {
       method: "POST",
