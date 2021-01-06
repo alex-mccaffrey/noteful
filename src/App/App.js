@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import NoteListNav from '../NoteListNav/NoteListNav';
-import NotePageNav from '../NotePageNav/NotePageNav';
-import NoteListMain from '../NoteListMain/NoteListMain';
-import NotePageMain from '../NotePageMain/NotePageMain';
-import AddFolder from '../AddFolder/AddFolder'
-import AddNote from '../AddNote/AddNote'
+//import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import NoteListNav from '../Components/NoteListNav/NoteListNav';
+import NotePageNav from '../Components/NotePageNav/NotePageNav';
+import NoteListMain from '../Components/NoteListMain/NoteListMain';
+import NotePageMain from '../Components/NotePageMain/NotePageMain';
+import AddFolder from '../Components/AddFolder/AddFolder'
+import AddNote from '../Components/AddNote/AddNote'
 import ApiContext from '../ApiContext';
 import config from '../config';
 import './App.css';
@@ -50,6 +50,12 @@ class App extends Component {
         });
       };
 
+      handleDeleteFolder = folderId => {
+        this.setState({
+            folders: this.state.folders.filter(folder => folder.id !== folderId)
+        });
+    };
+
     handleDeleteNote = noteId => {
         this.setState({
             notes: this.state.notes.filter(note => note.id !== noteId)
@@ -68,7 +74,7 @@ class App extends Component {
                     />
                 ))}
                 <Route path="/note/:noteId" component={NotePageNav} />
-                <Route path="/add-folder" component={NotePageNav} />
+                <Route path="/add-folder" component={AddFolder} />
                 <Route exact path='/' component={AddFolder} />
                 <Route path="/add-note" component={AddNote} />
             </>
@@ -96,6 +102,7 @@ class App extends Component {
             notes: this.state.notes,
             folders: this.state.folders,
             deleteNote: this.handleDeleteNote,
+            deleteFolder: this.handleDeleteFolder,
             setFolders: this.setFolders,
             addNote: this.handleAddNote
         };

@@ -1,0 +1,10 @@
+.NoteListMain ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.NoteListMain__add-note-button {
+    margin: 20px;
+}

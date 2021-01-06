@@ -1,0 +1,32 @@
+.NoteListNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px dashed lightblue;
+    padding: 5px;
+    margin: 20px;
+}
+
+.NoteListNav__folder-link {
+    text-decoration: underline;
+    color: black;
+    font-weight: bolder;
+    margin: 50px;
+    border: 10px royalblue;
+    padding: 2px;
+    margin: 5px;
+}
+
+
+.NoteListNav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.Folder__delete {
+   margin-right: 25px;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import ApiContext from "../ApiContext";
+import ApiContext from "../../ApiContext";
 import NoteError from "../NoteError/NoteError";
 import "./AddNote.css";
 

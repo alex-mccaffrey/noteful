@@ -1,7 +1,7 @@
 import React from 'react';
 import './AddFolder.css'
-import ApiContext from '../ApiContext';
-import config from '../config'
+import ApiContext from '../../ApiContext';
+import config from '../../config'
 
 class AddFolder extends React.Component {
     state = {

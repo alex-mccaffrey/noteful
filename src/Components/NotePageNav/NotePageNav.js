@@ -1,8 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import CircleButton from '../CircleButton/CircleButton'
-import ApiContext from '../ApiContext'
-import { findNote, findFolder } from '../notes-helpers'
+//import CircleButton from '../../CircleButton/CircleButton'
+import ApiContext from '../../ApiContext'
+import { findNote, findFolder } from '../../notes-helpers'
 import './NotePageNav.css'
 
 export default class NotePageNav extends React.Component {
@@ -23,7 +23,7 @@ export default class NotePageNav extends React.Component {
     const folder = findFolder(folders, note.folderId)
     return (
       <div className='NotePageNav'>
-        <CircleButton
+        <button
           tag='button'
           role='link'
           onClick={() => this.props.history.goBack()}
@@ -32,7 +32,7 @@ export default class NotePageNav extends React.Component {
           <FontAwesomeIcon icon='chevron-left' />
           <br />
           Back
-        </CircleButton>
+        </button>
         {folder && (
           <h3 className='NotePageNav__folder-name'>
             {folder.name}
