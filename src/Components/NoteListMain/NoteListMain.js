@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Note from '../Note/Note'
@@ -48,3 +49,8 @@ export default class NoteListMain extends React.Component {
     )
   }
 }
+
+
+NoteListMain.propTypes = {
+  params: PropTypes.object
+  }

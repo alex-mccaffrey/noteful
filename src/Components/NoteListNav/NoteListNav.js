@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../../ApiContext'
 import './NoteListNav.css'
@@ -67,4 +68,8 @@ export default class NoteListNav extends React.Component {
       </div>
     )
   }
+}
+
+NoteListNav.propTypes = {
+  onDeleteFolder: PropTypes.func
 }
