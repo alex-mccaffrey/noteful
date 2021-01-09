@@ -13,6 +13,10 @@ Add Note: This is the interface to add a note. It is required to include a name,
 
 <img src="./screenshots/noteful-add-note.jpeg" width="500" height="400"/>
 
+Note Detail: When a specific note is selected, this screen is preseneted showing folder it is located within, last time it was modified, and the full content of the note. Also, you have the option to delete the note, or go back to the previous page.
+
+<img src="./screenshots/noteful-note-detail.jpeg" width="500" height="400" />
+
 
 ### Built With:
 
