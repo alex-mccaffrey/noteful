@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./NoteError.css";
+import "./AddNoteError.css";
 
 export default function NoteError(props) {
   if (props.message) {

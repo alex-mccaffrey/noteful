@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import ApiContext from "../../ApiContext";
-import NoteError from "../NoteError/NoteError";
+import AddNoteError from "../AddNoteError/AddNoteError";
 import "./AddNote.css";
 
 class AddNote extends React.Component {
@@ -27,29 +28,24 @@ class AddNote extends React.Component {
         value: "",
       },
     };
-    console.log(this.state.name.value);
   }
 
   updateName(name) {
     this.setState({ name: { value: name, touched: true } });
-    console.log(this.state.name.value);
   }
 
   updateContent(content) {
     this.setState({ content: { value: content } });
-    console.log(this.state.content.value);
   }
 
   updateFolder(folder) {
     this.setState({ folder: { value: folder } }, () => {
-      console.log(this.state.folder.value);
     });
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     const { name, content, folder } = this.state;
-    console.log(name);
     const addNote = {
       name: name.value,
       content: content.value,
@@ -133,18 +129,20 @@ class AddNote extends React.Component {
             </select>
             </div>
 
-{this.state.name.touched && <NoteError message={nameError} />}
-
 <div className="AddNote-button-container">
   <button type="submit" disabled={this.validateName()}>
     Submit
   </button>
 </div>
-{this.state.name.touched && <NoteError message={nameError} />}
+{this.state.name.touched && <AddNoteError message={nameError} />}
 </form>
 </div>
     );
   }
+}
+
+AddNote.propType = {
+  history: PropTypes.object
 }
 
 export default AddNote;
